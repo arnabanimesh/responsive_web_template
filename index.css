@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    background-color: navy;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x:scroll;
+    position: absolute;
+}
+
+* {
+    transition: 500ms;
+}
+
+#left-parent,#left {
+    box-sizing: border-box;
+    width: 25%;
+    height: 100vh;
+    background-color: rgb(12, 12, 82);
+    float: left;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#left {
+    position: fixed;
+}
+
+#right {
+    width: 75%;
+    height: auto;
+    background-color: rgb(6, 6, 36);
+    float: left;
+    overflow: auto;
+}
+
+#profile-img {
+    width: 25vh;
+    height: 25vh;
+    object-fit: cover;
+    object-position: 10% 30%;
+    border-radius: 50%;
+}
+
+#name-el {
+    font-size: 19px;
+}
+
+#connect-btn {
+    border: none;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: rgb(12, 12, 82);
+    margin: 10px;
+    text-decoration: none;
+}
+
+#connect-btn-short {
+    display: none;
+}
+
+#leftpara-el {
+    text-align: center;
+}
+
+#nav-background {
+    background-color: rgb(12, 12, 82);
+    position:fixed;
+    padding: inherit;
+    height: 100px;
+    top: 0;
+    width: 75%;
+}
+
+#nav-pane {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    left: auto;
+}
+
+#logo-img {
+    height: 30px;
+    width: auto;
+}
+
+#navlinks {
+    float: right;
+}
+
+#navlinks>a{
+    text-decoration: none;
+    color: grey;
+    margin: 0 10px;
+}
+
+#navlinks>a:hover{
+    transition: ease-in-out 500ms;
+    color: rgb(66, 66, 66);
+}
+
+#description-el{
+    color: white;
+    text-align: justify;
+    padding: 130px 30px 0;
+}
+
+@media only screen and (max-width: 1000px) {
+    #leftpara-el {
+        height: 35vh;
+        overflow: clip;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    #profile-img {
+        width: 70px;
+        height: 70px;
+    }
+    #left {
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+    }
+    #left>* {
+        margin: 0 30px;
+    }
+    #left-parent,#left {
+        position:fixed;
+        top: 70px;
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+    #leftpara-el {
+        display: none;
+    }
+    #connect-btn {
+        display: none;
+    }
+    #right {
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+    #nav-background{
+        width: 100%;
+        height: 70px;
+    }
+    #nav-pane,#nav-background{
+        position: fixed;
+        right: 0;
+        left: 0;
+        box-sizing: border-box;
+    }
+    #navlinks>a{
+        margin: 0 5px;
+    }
+    #description-el {
+        padding-top: 200px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #name-el {
+        font-size: 15px;
+    }
+    #home-navlink {
+        display: none;
+    }
+}
